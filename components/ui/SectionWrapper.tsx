@@ -33,7 +33,6 @@ export function SectionWrapper({
       variants={fadeUp}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      initial={false}
       className={`${paddingMap[padding]} ${className}`}>
       {children}
     </motion.section>

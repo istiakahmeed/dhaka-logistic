@@ -14,7 +14,6 @@ export function CapabilitiesProse() {
     <section ref={ref} className="bg-surface-light py-[96px] md:py-[120px]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
         <motion.div
-          initial={false}
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4, ease: "easeOut" }}
@@ -30,7 +29,6 @@ export function CapabilitiesProse() {
         </motion.div>
 
         <motion.div
-          initial={false}
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
