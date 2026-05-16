@@ -2,40 +2,16 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { data } from "@/lib/data";
-import type { OrgNode } from "@/types/dlss";
 
-function renderNode(node: OrgNode, depth: number = 0): React.ReactNode {
-  const hasChildren = node.children && node.children.length > 0;
-
-  return (
-    <div key={node.title} className="flex flex-col items-center">
-      <div className="bg-green-primary text-white text-xs font-body font-semibold px-5 py-2.5 whitespace-nowrap">
-        {node.title}
-      </div>
-      {hasChildren && (
-        <>
-          <div className="w-px h-6 bg-green-accent" />
-          <div className="relative flex gap-6 justify-center">
-            {node.children!.length > 1 && (
-              <div className="absolute top-0 left-[10%] right-[10%] h-px bg-green-accent" />
-            )}
-            <div className="flex gap-6 pt-6">
-              {node.children!.map((child) => (
-                <div key={child.title} className="flex flex-col items-center relative">
-                  {node.children!.length > 1 && (
-                    <div className="absolute -top-6 left-1/2 w-px h-6 bg-green-accent" />
-                  )}
-                  {renderNode(child, depth + 1)}
-                </div>
-              ))}
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
+const heads = [
+  "Head of Legal",
+  "Head of Finance",
+  "Head of Logistics",
+  "Head of Engineering & Construction",
+  "Head of Sales & Marketing",
+  "Head of HR",
+  "Head of Catering",
+];
 
 export function OrgChartSection() {
   const ref = useRef(null);
@@ -60,12 +36,74 @@ export function OrgChartSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center overflow-x-auto py-8"
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="max-w-5xl mx-auto"
         >
-          {data.orgChart.map((node) => renderNode(node))}
+          {/* Tier 1 — Advisory Board */}
+          <div className="flex justify-center mb-0">
+            <div className="bg-green-primary text-white text-xs font-body font-semibold px-6 py-3">
+              Advisory Board
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="w-px h-8 bg-green-accent" />
+          </div>
+
+          {/* Tier 2 — Chairman */}
+          <div className="flex justify-center">
+            <div className="bg-green-primary text-white text-xs font-body font-semibold px-6 py-3">
+              Chairman
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="w-px h-8 bg-green-accent" />
+          </div>
+
+          {/* Tier 3 — CEO | COO */}
+          <div className="relative flex justify-center gap-16">
+            {/* Horizontal connector bar */}
+            <div className="absolute top-0 left-[calc(50%-5rem)] right-[calc(50%-5rem)] h-px bg-green-accent" />
+            <div className="flex justify-center gap-16 pt-0">
+              <div className="flex flex-col items-center">
+                <div className="w-px h-6 bg-green-accent" />
+                <div className="bg-green-primary text-white text-xs font-body font-semibold px-6 py-3">
+                  CEO
+                </div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-px h-6 bg-green-accent" />
+                <div className="bg-green-primary text-white text-xs font-body font-semibold px-6 py-3">
+                  COO
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Vertical connector to department heads */}
+          <div className="flex justify-center">
+            <div className="w-px h-8 bg-green-accent" />
+          </div>
+
+          {/* Horizontal connector bar for heads */}
+          <div className="relative">
+            <div className="absolute top-0 left-[5%] right-[5%] h-px bg-green-accent" />
+
+            {/* Tier 4 — Department Heads */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-0 pt-0">
+              {heads.map((title, i) => (
+                <div key={i} className="flex flex-col items-center pt-6">
+                  <div className="w-px h-6 bg-green-accent" />
+                  <div className="bg-green-primary/10 border border-green-accent/30 text-green-primary text-xs font-body font-medium px-3 py-2.5 text-center leading-snug">
+                    {title}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
