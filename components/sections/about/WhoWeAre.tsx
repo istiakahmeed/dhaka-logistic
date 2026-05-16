@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { data } from "@/lib/data";
 
@@ -34,20 +35,48 @@ export function WhoWeAre() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-2 h-[240px] md:h-[320px]"
         >
-          <div className="bg-green-primary/20 col-span-2 flex items-center justify-center text-2xl font-mono font-bold text-green-accent/30">
-            {/* Photo placeholder */}
+          <div className="relative col-span-2 overflow-hidden">
+            <Image
+              src="/services/Vehicle-Tracking&Telematics.jpg"
+              alt="DLSS Operations"
+              fill
+              className="object-cover"
+              sizes="40vw"
+            />
           </div>
-          <div className="bg-green-primary flex items-center justify-center" />
-          <div className="bg-green-accent flex items-center justify-center relative">
-            <span className="absolute inset-0 flex items-center justify-center font-mono font-bold text-green-primary text-3xl leading-none">
+          <div className="bg-green-primary relative overflow-hidden">
+            <Image
+              src="/services/Payroll-Management.jpg"
+              alt="DLSS Payroll"
+              fill
+              className="object-cover"
+              sizes="15vw"
+            />
+          </div>
+          <div className="bg-green-accent relative flex items-center justify-center">
+            <span className="font-mono font-bold text-green-primary text-3xl leading-none z-10">
               5
               <br />
               Cities
             </span>
           </div>
-          <div className="bg-green-primary/40 flex items-center justify-center" />
-          <div className="bg-green-primary/20 flex items-center justify-center">
-            {/* Photo placeholder */}
+          <div className="bg-green-primary/40 relative overflow-hidden">
+            <Image
+              src="/services/Facility&Catering-Management.jpg"
+              alt="DLSS Facility Management"
+              fill
+              className="object-cover"
+              sizes="15vw"
+            />
+          </div>
+          <div className="relative overflow-hidden">
+            <Image
+              src="/services/Event-Management.jpg"
+              alt="DLSS Events"
+              fill
+              className="object-cover"
+              sizes="15vw"
+            />
           </div>
         </motion.div>
       </div>
