@@ -1,11 +1,22 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const trustClients = ["BATB", "Berger", "Grameenphone", "Standard Chartered", "Novo Nordisk", "Daraz", "Roche"];
+
+const clientLogos: Record<string, string> = {
+  "BATB": "/client-logo/BATB.png",
+  "Berger": "/client-logo/bergerlogo.svg",
+  "Grameenphone": "/client-logo/Grameenphone.png",
+  "Standard Chartered": "/client-logo/scb.png",
+  "Novo Nordisk": "/client-logo/novo_nordisk.png",
+  "Daraz": "/client-logo/Daraz-logo.png",
+  "Roche": "/client-logo/Roche.png",
+};
 
 export function Hero() {
   return (
@@ -63,12 +74,42 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="hidden lg:grid grid-cols-[1.2fr_0.8fr] grid-rows-[1fr_1fr] gap-3 h-[520px]"
         >
-          <div className="bg-green-primary/20 row-span-2 flex items-center justify-center text-7xl font-mono font-bold text-green-accent/30">
-            {/* Photo placeholder — replace with <Image> */}
+          <div className="relative row-span-2 overflow-hidden">
+            <Image
+              src="/services/Human-Resource.jpg"
+              alt="DLSS Operations"
+              fill
+              className="object-cover"
+              sizes="30vw"
+            />
           </div>
-          <div className="bg-green-primary flex items-center justify-center" />
-          <div className="bg-green-accent flex items-center justify-center" />
-          <div className="bg-green-primary/40 flex items-center justify-center" />
+          <div className="bg-green-primary relative overflow-hidden">
+            <Image
+              src="/services/Logistics-Services&Solutions.jpg"
+              alt="DLSS Logistics"
+              fill
+              className="object-cover"
+              sizes="15vw"
+            />
+          </div>
+          <div className="bg-green-accent relative overflow-hidden">
+            <Image
+              src="/services/Engineering&Construction.jpg"
+              alt="DLSS Engineering"
+              fill
+              className="object-cover"
+              sizes="15vw"
+            />
+          </div>
+          <div className="bg-green-primary/40 relative overflow-hidden">
+            <Image
+              src="/services/Event-Management.jpg"
+              alt="DLSS Events"
+              fill
+              className="object-cover"
+              sizes="15vw"
+            />
+          </div>
         </motion.div>
       </div>
 
@@ -77,14 +118,18 @@ export function Hero() {
           <span className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-mid shrink-0">
             Trusted by
           </span>
-          {trustClients.map((name) => (
-            <span
-              key={name}
-              className="text-sm font-body font-semibold text-gray-400 transition-colors duration-150 hover:text-green-primary shrink-0"
-            >
-              {name}
-            </span>
-          ))}
+          {trustClients.map((name) => {
+            const logo = clientLogos[name];
+            return logo ? (
+              <div key={name} className="relative w-16 h-8 shrink-0 transition-all duration-200 hover:scale-105" style={{ opacity: 0.6, filter: "saturate(0.8)" }}>
+                <Image src={logo} alt={name} fill className="object-contain" sizes="10vw" />
+              </div>
+            ) : (
+              <span key={name} className="text-sm font-body font-semibold text-gray-400 transition-colors duration-150 hover:text-green-primary shrink-0">
+                {name}
+              </span>
+            );
+          })}
         </div>
       </div>
     </section>

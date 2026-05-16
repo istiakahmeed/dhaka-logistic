@@ -1,9 +1,21 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SummaryStrip } from "@/components/sections/services/SummaryStrip";
 import { data } from "@/lib/data";
+
+const serviceImages: Record<string, string> = {
+  "01": "/services/Human-Resource.jpg",
+  "02": "/services/Payroll-Management.jpg",
+  "03": "/services/Audit.jpg",
+  "04": "/services/Logistics-Services&Solutions.jpg",
+  "05": "/services/Vehicle-Tracking&Telematics.jpg",
+  "06": "/services/Engineering&Construction.jpg",
+  "07": "/services/Facility&Catering-Management.jpg",
+  "08": "/services/Event-Management.jpg",
+};
 
 export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -16,6 +28,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
 
   const prev = index > 0 ? data.services[index - 1] : null;
   const next = index < data.services.length - 1 ? data.services[index + 1] : null;
+  const imgSrc = serviceImages[service.id];
 
   return (
     <main className="overflow-x-hidden">
@@ -37,8 +50,8 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
       </section>
 
       <section className="bg-surface-light">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-[96px] md:py-[120px] grid grid-cols-1 md:grid-cols-[55%_45%] gap-16">
-          <div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[55%_45%]">
+          <div className="px-6 md:px-12 py-[96px] md:py-[120px]">
             <div className="relative">
               <span
                 className="font-mono font-bold text-neutral-dark select-none absolute -top-12 -left-4 leading-none"
@@ -80,7 +93,17 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
               </div>
             </div>
           </div>
-          <div />
+          {imgSrc && (
+            <div className="relative min-h-[300px] md:min-h-full">
+              <Image
+                src={imgSrc}
+                alt={service.title}
+                fill
+                className="object-cover"
+                sizes="45vw"
+              />
+            </div>
+          )}
         </div>
       </section>
 

@@ -1,8 +1,20 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import type { ServiceDetail as ServiceDetailType } from "@/types/dlss";
+
+const serviceImages: Record<string, string> = {
+  "01": "/services/Human-Resource.jpg",
+  "02": "/services/Payroll-Management.jpg",
+  "03": "/services/Audit.jpg",
+  "04": "/services/Logistics-Services&Solutions.jpg",
+  "05": "/services/Vehicle-Tracking&Telematics.jpg",
+  "06": "/services/Engineering&Construction.jpg",
+  "07": "/services/Facility&Catering-Management.jpg",
+  "08": "/services/Event-Management.jpg",
+};
 
 interface ServiceDetailProps {
   service: ServiceDetailType;
@@ -60,7 +72,19 @@ export function ServiceDetailBlock({ service, index }: ServiceDetailProps) {
     </div>
   );
 
-  const accentSide = (
+  const imgSrc = serviceImages[service.id];
+
+  const accentSide = imgSrc ? (
+    <div className="relative overflow-hidden">
+      <Image
+        src={imgSrc}
+        alt={service.title}
+        fill
+        className="object-cover"
+        sizes="45vw"
+      />
+    </div>
+  ) : (
     <div className={isOdd ? "bg-green-primary" : "bg-green-accent"} />
   );
 
