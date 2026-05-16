@@ -9,11 +9,17 @@ export interface CompanyData {
   emails: string[];
   offices: Record<string, { label: string; address: string }>;
   regions: string[];
+  social: { platform: string; url: string }[];
+  team: string;
+  teamDescription: string;
+  managementExperience: string;
+  maxExperience: string;
 }
 
 export interface Stat {
   value: string;
   label: string;
+  sublabel: string;
 }
 
 export interface Capability {
@@ -21,11 +27,14 @@ export interface Capability {
   description: string;
 }
 
-export interface Service {
+export interface ServiceDetail {
   id: string;
   title: string;
   description: string;
   subServices: string[];
+  accentStat: string;
+  partnerCallout?: string;
+  partnerDescription?: string;
 }
 
 export interface Client {
@@ -49,6 +58,7 @@ export interface Partner {
   name: string;
   domain: string;
   description: string;
+  collaboration: string;
 }
 
 export interface ContactPerson {
@@ -59,15 +69,57 @@ export interface ContactPerson {
   email: string;
 }
 
+export interface BusinessDataClient {
+  name: string;
+  revenue: number;
+}
+
+export interface BusinessAreaBreakdown {
+  area: string;
+  percentage: number;
+}
+
+export interface BusinessData {
+  clients: BusinessDataClient[];
+  areaBreakdown: BusinessAreaBreakdown[];
+}
+
+export interface FuturePlan {
+  title: string;
+  description: string;
+  pillars: string[];
+}
+
+export interface MissionValue {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export interface OrgNode {
+  title: string;
+  children?: OrgNode[];
+}
+
+export interface AboutData {
+  heroSubtitle: string;
+  whoWeAre: string;
+}
+
 export interface DLSSData {
   company: CompanyData;
+  about: AboutData;
   stats: Stat[];
   vision: string;
+  visionAttribution: string;
   mission: string[];
+  missionDetailed: MissionValue[];
   values: string[];
   capabilities: Capability[];
-  services: Service[];
+  whyDLSS: { heading: string; body: string };
+  services: ServiceDetail[];
   clients: Client[];
+  trustedClients: string[];
   resources: {
     total: number;
     breakdown: ResourceBreakdown[];
@@ -75,9 +127,7 @@ export interface DLSSData {
   };
   partners: Partner[];
   contacts: ContactPerson[];
-  future: {
-    title: string;
-    description: string;
-    pillars: string[];
-  };
+  future: FuturePlan;
+  businessData2025: BusinessData;
+  orgChart: OrgNode[];
 }
