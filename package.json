@@ -22,7 +22,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "pages:build": "next build && wrangler pages deploy .next/static"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
