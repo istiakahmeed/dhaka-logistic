@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Barlow } from "next/font/google";
+import {
+  Plus_Jakarta_Sans,
+  Inter,
+  JetBrains_Mono,
+} from "next/font/google";
 import "./globals.css";
 
-const barlowCondensed = Barlow_Condensed({
-  variable: "--font-condensed",
-  weight: ["300", "700", "900"],
+const display = Plus_Jakarta_Sans({
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
-const barlow = Barlow({
-  variable: "--font-barlow",
-  weight: ["300", "400", "500", "600"],
+const body = Inter({
+  variable: "--font-body",
+  weight: ["400", "500"],
+  subsets: ["latin"],
+});
+
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -42,12 +52,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang='en'
-      className={`${barlowCondensed.variable} ${barlow.variable} h-full antialiased scroll-smooth`}
+      lang="en"
+      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className='min-h-full flex flex-col bg-charcoal text-white-brand'>
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

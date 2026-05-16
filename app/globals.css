@@ -1,45 +1,43 @@
 @import "tailwindcss";
 
-/* Design System CSS Variables */
-:root {
-  --green: #6dbe45;
-  --green-dark: #4a9028;
-  --green-glow: rgba(109, 190, 69, 0.12);
-  --charcoal: #0f1110;
-  --charcoal-mid: #181c1a;
-  --charcoal-card: #1e2421;
-  --charcoal-border: #2a3028;
-  --white: #f5f7f4;
-  --white-dim: rgba(245, 247, 244, 0.62);
-  --white-faint: rgba(245, 247, 244, 0.08);
-  --font-condensed: "Barlow Condensed", sans-serif;
-  --font-barlow: "Barlow", sans-serif;
+/* ─── Brand Tokens ───
+   Change values here to update the entire site.
+   These become both CSS variables (var(--color-*)) and Tailwind utilities (bg-green-primary, text-green-accent, etc.)
+*/
+@theme {
+  --color-green-primary: #1a4d2e;
+  --color-green-primary-hover: #145c24;
+  --color-green-accent: #7dc142;
+  --color-neutral-dark: #111111;
+  --color-neutral-mid: #4a4a4a;
+  --color-surface-light: #f5f5f3;
+  --color-white: #ffffff;
+  --color-divider: #e2e2de;
+  --color-green-primary-dark: #0d2b1a;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
-@theme inline {
-  --color-green-brand: var(--green);
-  --color-green-dark: var(--green-dark);
-  --color-charcoal: var(--charcoal);
-  --color-charcoal-mid: var(--charcoal-mid);
-  --color-charcoal-card: var(--charcoal-card);
-  --color-charcoal-border: var(--charcoal-border);
-  --color-white-brand: var(--white);
-  --color-white-dim: var(--white-dim);
-  --color-white-faint: var(--white-faint);
-  --font-sans: var(--font-barlow);
+/* ─── CSS Custom Properties for JS runtime access ─── */
+:root {
+  --green-primary: #1a4d2e;
+  --green-primary-hover: #145c24;
+  --green-accent: #7dc142;
+  --neutral-dark: #111111;
+  --neutral-mid: #4a4a4a;
+  --surface-light: #f5f5f3;
+  --white: #ffffff;
+  --divider: #e2e2de;
 }
 
 @layer base {
   body {
-    @apply bg-charcoal text-white-brand;
+    @apply bg-white text-neutral-mid font-body antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-condensed);
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-neutral-dark;
   }
 }

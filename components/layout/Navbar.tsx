@@ -1,116 +1,118 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#clients", label: "Clients" },
-  { href: "#resources", label: "Resources" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/clients", label: "Clients" },
+  { href: "/capability", label: "Capability" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
-  const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 60);
-  });
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 100);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const handleSmoothScroll = (href: string) => {
-    setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const showDark = isScrolled || !isHome;
 
   return (
     <motion.nav
-      className='fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6'
+      className="fixed top-0 left-0 right-0 z-50 h-[68px]"
+      initial={false}
       animate={{
-        backgroundColor: isScrolled
-          ? "rgba(15, 17, 16, 0.95)"
-          : "rgba(15, 17, 16, 0)",
-        backdropFilter: isScrolled ? "blur(12px)" : "blur(0px)",
-        borderBottomColor: isScrolled
-          ? "rgba(42, 48, 40, 1)"
-          : "rgba(42, 48, 40, 0)",
-        borderBottomWidth: isScrolled ? 1 : 0,
+        backgroundColor: showDark ? "#1a4d2e" : "#ffffff",
+        borderBottomColor: showDark ? "rgba(255,255,255,0.08)" : "#e2e2de",
       }}
-      transition={{ duration: 0.3 }}
-    >
-      <div className='max-w-7xl mx-auto flex items-center justify-between'>
-        {/* Logo */}
-        <a
-          href='#'
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className='font-condensed font-black text-xl uppercase tracking-wider cursor-pointer group'
-        >
-          <span className='text-white-brand'>DHAKA</span>
-          <span className='text-green-brand ml-2'>LOGISTICS</span>
-        </a>
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      style={{
+        borderBottomWidth: 1,
+        backdropFilter: showDark ? "blur(12px)" : "none",
+      }}>
+      <div className="max-w-7xl mx-auto h-full px-6 md:px-12 flex items-center justify-between">
+        <Link
+          href="/"
+          className="font-display font-bold text-lg tracking-tight">
+          <span
+            className="transition-colors duration-300"
+            style={{ color: showDark ? "#ffffff" : "#1a4d2e" }}>
+            DHAKA
+          </span>
+          <span
+            className="transition-colors duration-300 ml-1"
+            style={{
+              color: showDark ? "#7dc142" : "#1a4d2e",
+              fontWeight: 700,
+            }}>
+            LOGISTICS
+          </span>
+        </Link>
 
-        {/* Desktop Nav Links */}
-        <div className='hidden md:flex gap-8'>
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <motion.a
+            <Link
               key={link.href}
               href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleSmoothScroll(link.href);
-              }}
-              className='text-white-dim hover:text-green-brand transition-colors font-barlow text-sm font-medium'
-              whileHover={{ color: "#6dbe45" }}
-            >
+              className="text-sm font-body font-medium transition-colors duration-100 hover:text-green-accent"
+              style={{ color: showDark ? "#ffffff" : "#4a4a4a" }}>
               {link.label}
-            </motion.a>
+            </Link>
           ))}
+          <Link
+            href="/contact"
+            className="bg-green-primary text-white text-sm font-body font-medium px-5 py-2.5 no-underline transition-colors duration-150 hover:bg-green-primary-hover">
+            Get In Touch
+          </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className='md:hidden'
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label='Toggle menu'
-        >
-          {isMobileMenuOpen ? (
-            <X size={24} className='text-green-brand' />
+          className="md:hidden"
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+          aria-label="Toggle menu">
+          {isMobileOpen ? (
+            <X size={20} color={showDark ? "#ffffff" : "#1a4d2e"} />
           ) : (
-            <Menu size={24} className='text-white-brand' />
+            <Menu size={20} color={showDark ? "#ffffff" : "#1a4d2e"} />
           )}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <motion.div
         initial={false}
         animate={{
-          height: isMobileMenuOpen ? "auto" : 0,
-          opacity: isMobileMenuOpen ? 1 : 0,
+          height: isMobileOpen ? "auto" : 0,
+          opacity: isMobileOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
-        className='md:hidden overflow-hidden'
-      >
-        <div className='flex flex-col gap-4 pt-4 pb-2'>
+        className="md:hidden overflow-hidden bg-white border-b border-divider">
+        <div className="flex flex-col gap-4 px-6 py-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleSmoothScroll(link.href);
-              }}
-              className='text-white-dim hover:text-green-brand transition-colors font-barlow text-sm font-medium'
-            >
+              className="text-neutral-mid text-sm font-body font-medium"
+              onClick={() => setIsMobileOpen(false)}>
               {link.label}
-            </a>
+            </Link>
           ))}
+          <Link
+            href="/contact"
+            className="bg-green-primary text-white text-sm font-body font-medium px-5 py-2.5 text-center"
+            onClick={() => setIsMobileOpen(false)}>
+            Get In Touch
+          </Link>
         </div>
       </motion.div>
     </motion.nav>
