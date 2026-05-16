@@ -1,8 +1,8 @@
 "use client";
 
-import { ReactNode, useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
+import { motion, useInView } from "framer-motion";
+import { ReactNode, useRef } from "react";
 
 interface SectionWrapperProps {
   id?: string;
@@ -11,7 +11,12 @@ interface SectionWrapperProps {
   padding?: "sm" | "md" | "lg";
 }
 
-export function SectionWrapper({ id, children, className = "", padding = "lg" }: SectionWrapperProps) {
+export function SectionWrapper({
+  id,
+  children,
+  className = "",
+  padding = "lg",
+}: SectionWrapperProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -29,8 +34,7 @@ export function SectionWrapper({ id, children, className = "", padding = "lg" }:
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       initial={false}
-      className={`${paddingMap[padding]} ${className}`}
-    >
+      className={`${paddingMap[padding]} ${className}`}>
       {children}
     </motion.section>
   );

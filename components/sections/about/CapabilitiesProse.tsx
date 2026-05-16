@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { data } from "@/lib/data";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const capabilities = data.capabilities;
 
@@ -18,8 +18,7 @@ export function CapabilitiesProse() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="flex gap-6"
-        >
+          className="flex gap-6">
           <div className="w-[3px] h-12 bg-green-accent shrink-0 mt-1" />
           <div>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-neutral-dark leading-tight">
@@ -35,10 +34,11 @@ export function CapabilitiesProse() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-          className="space-y-6"
-        >
+          className="space-y-6">
           {capabilities.map((cap, i) => (
-            <p key={i} className="text-sm font-body text-neutral-mid leading-relaxed">
+            <p
+              key={i}
+              className="text-sm font-body text-neutral-mid leading-relaxed">
               {cap.description}
             </p>
           ))}
