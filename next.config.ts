@@ -1,10 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* Cloudflare Pages compatibility */
-  experimental: {
-    isrMemoryCacheSize: 0,
-  },
+  /* config options here */
 };
 
 export default nextConfig;
