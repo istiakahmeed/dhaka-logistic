@@ -1,0 +1,365 @@
+{
+  "company": {
+    "name": "Dhaka Logistics Services & Solution",
+    "shortName": "DLSS",
+    "tagline": "One Single Point of Contact",
+    "description": "DLSS is your strategic partner for HR outsourcing, logistics management, and comprehensive support services — freeing your managerial bandwidth to focus on growth.",
+    "established": 2010,
+    "website": "www.dhakalogistic.com",
+    "phone": "+88 02 9833589",
+    "emails": ["dhakalogistics@outlook.com", "admin@dhakalogistic.com"],
+    "offices": {
+      "registered": {
+        "label": "Registered Office",
+        "address": "24/A, Skylark Point (4th Floor), Bijoy Nagar, Dhaka – 1000"
+      },
+      "corporate": {
+        "label": "Corporate Office",
+        "address": "H # 101 B (South), R # 07, New DOHS, Mohakhali, Dhaka – 1206"
+      }
+    },
+    "regions": ["Dhaka", "Chittagong", "Rajshahi", "Khulna", "Kushtia"]
+  },
+
+  "stats": [
+    { "value": "2234+", "label": "Deployed Resources" },
+    { "value": "15+", "label": "Years Experience" },
+    { "value": "22+", "label": "Major Clients" },
+    { "value": "5", "label": "Regional Offices" }
+  ],
+
+  "vision": "We will be the one single point of contact to buy in all routine as well as sudden support & services and related tasks to free Managerial time of an Organization to boost up the Organizational efficiency through proper utilization of strategic planning method and decision-making capabilities.",
+
+  "mission": [
+    "Ease in all day-to-day problems through support, service and related routine jobs of an Organization.",
+    "Free Managerial time so that the Manager is able to fully focus on business growth via determining strategies, planning & execution.",
+    "Support the Organization to boost up the organizational efficiency."
+  ],
+
+  "values": [
+    "Highly committed business delivery & results",
+    "Listening skills",
+    "Motivated team of professionals",
+    "Long term business relationship",
+    "Work environment and professionalism"
+  ],
+
+  "capabilities": [
+    {
+      "title": "Multinational Experience",
+      "description": "Strong understanding of Code of Conduct, Compliant culture based on Labour laws/rules, Corporate Citizenship, and Industrial Relations."
+    },
+    {
+      "title": "Government Liaison",
+      "description": "Strong liaison and relationship with law enforcing agencies, government and non-government bodies to ease jobs timely and efficiently."
+    },
+    {
+      "title": "Engineering Strength",
+      "description": "Graduate Engineers from top institutes including BUET handling construction, design, and engineering projects."
+    },
+    {
+      "title": "Financial Solvent",
+      "description": "Financially solvent without primary dependency on financial institutions. Management averages 15 years experience, max 35 years."
+    }
+  ],
+
+  "services": [
+    {
+      "id": "01",
+      "title": "Human Resource Outsourcing",
+      "description": "Recruitment, selection, training orientation, service book preparation, and complete HR operations management.",
+      "subServices": [
+        "Recruitment and selection",
+        "Training & Orientation planning",
+        "Domestic Inquiry",
+        "Service book preparation & govt. approval",
+        "Termination & Final settlement Services"
+      ]
+    },
+    {
+      "id": "02",
+      "title": "HR / IR Consultancy & Audit",
+      "description": "Industrial relations consulting, CBA negotiation support, and compliance audit services for multinational and local companies.",
+      "subServices": [
+        "HR Audit",
+        "IR Consultancy",
+        "CBA Negotiation Support",
+        "Labour Law Compliance"
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Payroll Management",
+      "description": "Complete payroll processing including Provident Fund and Gratuity management, ensuring accurate and timely disbursement.",
+      "subServices": [
+        "Monthly Payroll Processing",
+        "Provident Fund Management",
+        "Gratuity Management",
+        "Banking and transaction services"
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Logistics Services & Solutions",
+      "description": "Vehicle management, ETMS & telematics support, database monitoring, and logistic support services nationwide.",
+      "subServices": [
+        "Logistic support Services",
+        "Vehicle, ETMS & Telematics Support",
+        "Database management & monitoring",
+        "Communication & Monitoring"
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Event Management",
+      "description": "Corporate event planning and activation services in partnership with SalMark, delivering high-ROI experiences.",
+      "subServices": [
+        "Corporate Event Management",
+        "Event Activation",
+        "Printing & publication solutions"
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Business Operations Outsourcing",
+      "description": "Target-oriented sales support, call center management, communication & monitoring, and legal support services.",
+      "subServices": [
+        "Target oriented sales and support",
+        "Call Centre Operations",
+        "Legal support services",
+        "Communication & Monitoring"
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Canteen & Catering Services",
+      "description": "Full-spectrum catering and F&B management, cleaning & janitorial services for corporate facilities.",
+      "subServices": [
+        "Canteen and catering services",
+        "Cleaning & Janitorial Services",
+        "F&B Services",
+        "Hospitality Management"
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Engineering & Construction",
+      "description": "Design, erection, government permission services, and civil works handled by BUET-graduate engineers.",
+      "subServices": [
+        "Design & Erection",
+        "Govt. permission services",
+        "Construction & Civil works",
+        "Integrated Facility Management (IFM)"
+      ]
+    }
+  ],
+
+  "clients": [
+    {
+      "name": "British American Tobacco Bangladesh",
+      "shortName": "BATB",
+      "sector": "FMCG"
+    },
+    {
+      "name": "BERGER Paints Bangladesh Limited",
+      "shortName": "Berger",
+      "sector": "Manufacturing"
+    },
+    {
+      "name": "Grameenphone Limited",
+      "shortName": "Grameenphone",
+      "sector": "Telecom"
+    },
+    {
+      "name": "Standard Chartered Bank Bangladesh",
+      "shortName": "SCB",
+      "sector": "Banking"
+    },
+    { "name": "Novo Nordisk", "shortName": "Novo Nordisk", "sector": "Pharma" },
+    {
+      "name": "Evercare (Apollo) Hospitals Dhaka",
+      "shortName": "Evercare",
+      "sector": "Healthcare"
+    },
+    {
+      "name": "COATS Bangladesh Limited",
+      "shortName": "Coats",
+      "sector": "Manufacturing"
+    },
+    {
+      "name": "Daraz Bangladesh",
+      "shortName": "Daraz",
+      "sector": "E-commerce"
+    },
+    { "name": "Marico Bangladesh", "shortName": "Marico", "sector": "FMCG" },
+    {
+      "name": "Elanco Animal Health Bangladesh",
+      "shortName": "Elanco",
+      "sector": "Animal Health"
+    },
+    { "name": "Roche Bangladesh", "shortName": "Roche", "sector": "Pharma" },
+    {
+      "name": "Centro Tex Bangladesh Limited",
+      "shortName": "Centro",
+      "sector": "Garments"
+    },
+    { "name": "Mutual Trust Bank", "shortName": "MTB", "sector": "Banking" },
+    { "name": "DBL Group", "shortName": "DBL", "sector": "Garments" },
+    { "name": "Apex", "shortName": "Apex", "sector": "Footwear" },
+    {
+      "name": "RPGCL (Rupantorito Prakritik Gas Company Ltd)",
+      "shortName": "RPGCL",
+      "sector": "Energy"
+    },
+    {
+      "name": "United Dhaka Tobacco Company Limited",
+      "shortName": "JTI",
+      "sector": "FMCG"
+    },
+    { "name": "PetroMax LPG Ltd", "shortName": "PetroMax", "sector": "Energy" },
+    { "name": "Target Sourcing", "shortName": "Target", "sector": "Sourcing" },
+    {
+      "name": "DIFE (ILO Project)",
+      "shortName": "DIFE",
+      "sector": "Government/NGO"
+    },
+    {
+      "name": "Samobai (Govt), Khulna",
+      "shortName": "Samobai",
+      "sector": "Government"
+    },
+    {
+      "name": "Government of the People's Republic of Bangladesh",
+      "shortName": "GoB",
+      "sector": "Government"
+    },
+    { "name": "MWUK", "shortName": "MWUK", "sector": "International" }
+  ],
+
+  "resources": {
+    "total": 2234,
+    "breakdown": [
+      {
+        "role": "Think Tanks (Sr. Executives)",
+        "count": 3,
+        "outsourced": false
+      },
+      { "role": "Mid Level Management", "count": 15, "outsourced": false },
+      { "role": "Manager / Supervisor", "count": 25, "outsourced": true },
+      {
+        "role": "Consultant / Sub Asst. Engineer",
+        "count": 2,
+        "outsourced": false
+      },
+      { "role": "Chemist / Lab Assistant", "count": 6, "outsourced": true },
+      { "role": "Sales Officers", "count": 532, "outsourced": true },
+      { "role": "Regional Field Coordinator", "count": 6, "outsourced": true },
+      { "role": "Clerical Workers", "count": 128, "outsourced": true },
+      {
+        "role": "Factory Workers (Non-core)",
+        "count": 1133,
+        "outsourced": true
+      },
+      { "role": "Call Centre Executives", "count": 131, "outsourced": true },
+      { "role": "Office Peons / Messenger", "count": 33, "outsourced": true },
+      { "role": "Drivers", "count": 91, "outsourced": true },
+      { "role": "Lift Operators", "count": 4, "outsourced": true },
+      { "role": "Hospitality Management", "count": 22, "outsourced": true },
+      {
+        "role": "Electrician / Plumber / Technician",
+        "count": 11,
+        "outsourced": true
+      },
+      { "role": "Depot / Factory Tinter", "count": 16, "outsourced": true },
+      { "role": "Cooks", "count": 4, "outsourced": true },
+      { "role": "Gardeners", "count": 18, "outsourced": true },
+      { "role": "Patient Care Attendants", "count": 6, "outsourced": true },
+      {
+        "role": "Telephone / Info Centre Operator",
+        "count": 3,
+        "outsourced": true
+      },
+      { "role": "Hospitality", "count": 25, "outsourced": true },
+      { "role": "F&B Services", "count": 15, "outsourced": true }
+    ],
+    "highlights": [
+      { "value": "532", "label": "Sales Officers" },
+      { "value": "1133", "label": "Factory Workers" },
+      { "value": "131", "label": "Call Centre Execs" },
+      { "value": "128", "label": "Clerical Workers" },
+      { "value": "91", "label": "Drivers" },
+      { "value": "18", "label": "Senior Management" }
+    ]
+  },
+
+  "partners": [
+    {
+      "name": "SalMark",
+      "domain": "Event Management & Activation",
+      "description": "Inspired by renowned corporate leaders, SalMark focuses on reducing costs, increasing efficiency, and achieving better ROI through innovative event solutions."
+    },
+    {
+      "name": "Monower Associates",
+      "domain": "Management & HR Consulting",
+      "description": "Expert HR and management consultancy partner providing strategic advisory for complex organizational challenges."
+    },
+    {
+      "name": "3D Tracking",
+      "domain": "Vehicle Tracking & Safety Systems",
+      "description": "Global telematics service platform provider, founded in Guernsey in 2005, with UK-based servers. Powers all vehicle tracking and safety system services."
+    },
+    {
+      "name": "GreenRoad",
+      "domain": "Fleet Safety Telematics",
+      "description": "Founded in 2004, GreenRoad provides fleet management solutions focused on improving driver behavior through in-cab real-time coaching and driver engagement."
+    }
+  ],
+
+  "contacts": [
+    {
+      "name": "Md. Mizanur Rahman",
+      "designation": "Chief Operating Officer",
+      "initials": "MR",
+      "phone": "+880 1713082077",
+      "email": "mizanur.rahman@dhakalogistic.com"
+    },
+    {
+      "name": "Md. Rafiqul Islam",
+      "designation": "Chief Executive Officer",
+      "initials": "RI",
+      "phone": "+880 1729253111",
+      "email": "dhakalogistics@outlook.com"
+    }
+  ],
+
+  "future": {
+    "title": "Integrated Facility Management (IFM)",
+    "description": "DLSS is expanding into full IFM — covering General Cleaning, Utility Services, Construction & Civil Works, Warehouse Management, and Servicing & Maintenance under one umbrella.",
+    "pillars": [
+      "General Cleaning",
+      "Utility Services",
+      "Construction & Civil Works",
+      "Warehouse Management",
+      "Servicing & Maintenance"
+    ]
+  },
+
+  "businessData2025": {
+    "clients": [
+      { "name": "Berger", "revenue": 195000000 },
+      { "name": "BATB", "revenue": 444600000 },
+      { "name": "Centro", "revenue": 2040000 },
+      { "name": "Novonordisk", "revenue": 2700000 },
+      { "name": "Syngenta", "revenue": 1020000 },
+      { "name": "Apex", "revenue": 3480000 },
+      { "name": "MTB", "revenue": 192000000 },
+      { "name": "DBL Group", "revenue": 2300000 },
+      { "name": "Target", "revenue": 144000 }
+    ],
+    "areaBreakdown": [
+      { "area": "People Outsourcing", "percentage": 88 },
+      { "area": "VTS", "percentage": 7 },
+      { "area": "HR/IR Consultancy", "percentage": 5 }
+    ]
+  }
+}
