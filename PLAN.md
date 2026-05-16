@@ -360,3 +360,59 @@ data/
 | 8 — Polish | Medium | Phases 2-7 |
 
 Each phase is self-contained. Phases 2-7 can be parallelized.
+
+---
+
+## Phase 9 — Post-Launch Additions
+
+### 9.1 — Navbar Update
+- Added `Home` to nav links (was missing)
+- Replaced `Contact` with `Career` in nav links
+- "Get In Touch" button remains → `/contact`
+
+### 9.2 — Career Page
+**Route:** `/career`
+**File:** `app/career/page.tsx`
+- Hero: "Join Our Team." with subtext
+- Form: Name, Email, Phone, CV Upload (.pdf/.doc/.docx)
+- Underline input style matching Contact form
+- Success message on submit
+- Clean typographic design, no decorative elements
+
+### 9.3 — Dynamic Service Routes
+**Route:** `/services/[id]` (e.g., `/services/01`, `/services/02`)
+**File:** `app/services/[id]/page.tsx`
+- Reads `id` from params, matches against `data.services`
+- Renders full service detail (description, sub-services, accent stat, partner callouts)
+- Previous/Next navigation between services
+- Back to All Services link → `/services`
+- Summary strip at bottom
+- 404 for invalid IDs
+- Home page ServiceRow is now a clickable `<Link>` to `/services/[id]`
+
+### File Changes
+```
+NEW:
+  app/career/page.tsx
+  app/services/[id]/page.tsx
+
+MODIFIED:
+  components/layout/Navbar.tsx    — navLinks updated
+  components/layout/Footer.tsx    — quickLinks updated
+  components/ui/ServiceRow.tsx    — wrapped in Link
+```
+
+### File & Folder Architecture (Updated)
+```
+app/
+├── globals.css
+├── layout.tsx
+├── page.tsx                    # Home
+├── about/page.tsx
+├── career/page.tsx             # NEW
+├── services/
+│   ├── page.tsx                # Services list
+│   └── [id]/page.tsx           # Dynamic service detail  NEW
+├── clients/page.tsx
+├── capability/page.tsx
+└── contact/page.tsx

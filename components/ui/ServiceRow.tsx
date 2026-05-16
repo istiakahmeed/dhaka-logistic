@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 interface ServiceRowProps {
@@ -13,10 +14,11 @@ export function ServiceRow({ id, title, description }: ServiceRowProps) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div
+    <Link
+      href={`/services/${id}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group flex items-start gap-6 px-6 py-6 transition-all duration-200 cursor-pointer border-b border-divider"
+      className="flex items-start gap-6 px-6 py-6 transition-all duration-200 border-b border-divider no-underline"
       style={{ backgroundColor: hovered ? "#1a4d2e" : "transparent" }}
     >
       <span
@@ -47,6 +49,6 @@ export function ServiceRow({ id, title, description }: ServiceRowProps) {
           transform: hovered ? "translateX(4px)" : "translateX(0)",
         }}
       />
-    </div>
+    </Link>
   );
 }

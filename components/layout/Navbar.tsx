@@ -7,11 +7,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/clients", label: "Clients" },
   { href: "/capability", label: "Capability" },
-  { href: "/contact", label: "Contact" },
+  { href: "/career", label: "Career" },
 ];
 
 export function Navbar() {
@@ -26,7 +27,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const showDark = isScrolled || !isHome;
+  const showDark = isScrolled;
 
   return (
     <motion.nav

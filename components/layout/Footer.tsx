@@ -7,7 +7,7 @@ const quickLinks = [
   { href: "/services", label: "Services" },
   { href: "/clients", label: "Clients" },
   { href: "/capability", label: "Capability" },
-  { href: "/contact", label: "Contact" },
+  { href: "/career", label: "Career" },
 ];
 
 const serviceLinks = [
