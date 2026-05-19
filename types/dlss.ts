@@ -112,6 +112,7 @@ export interface JobPost {
   qualifications: string[];
   experience: string;
   salary?: string;
+  active?: boolean;
 }
 
 export interface AboutData {

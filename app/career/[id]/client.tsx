@@ -18,6 +18,7 @@ export default function JobDetailClient({
   prevJob,
   nextJob,
 }: JobDetailClientProps) {
+  const isActive = job.active !== false;
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -166,10 +167,31 @@ export default function JobDetailClient({
               className="lg:col-span-2">
               <div className="max-w-2xl">
                 <h2 className="font-display font-bold text-2xl text-neutral-dark mb-8">
-                  Apply for this Position
+                  {isActive ? "Apply for this Position" : "Position Closed"}
                 </h2>
 
-                {submitted ? (
+                {!isActive ? (
+                  <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="border border-gray-300 bg-gray-50 p-8 text-center">
+                    <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl text-gray-400">✕</span>
+                    </div>
+                    <p className="font-display font-bold text-xl text-neutral-mid mb-2">
+                      This Position is Currently Inactive
+                    </p>
+                    <p className="text-sm font-body text-neutral-mid mb-6">
+                      We're not accepting applications for this role at the moment. 
+                      Please check back later or browse our other open positions.
+                    </p>
+                    <Link
+                      href="/career"
+                      className="inline-flex items-center text-sm font-body font-semibold text-green-accent hover:gap-2 transition-all">
+                      Browse Open Positions →
+                    </Link>
+                  </motion.div>
+                ) : submitted ? (
                   <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}

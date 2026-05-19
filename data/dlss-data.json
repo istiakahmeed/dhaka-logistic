@@ -492,7 +492,8 @@
         "Experience in outsourcing and payroll management"
       ],
       "experience": "10+ years",
-      "salary": "Competitive, negotiable based on experience"
+      "salary": "Competitive, negotiable based on experience",
+      "active": true
     },
     {
       "id": "02",
@@ -514,7 +515,8 @@
         "2-3 years of experience in operations or logistics"
       ],
       "experience": "2-3 years",
-      "salary": "Negotiable"
+      "salary": "Negotiable",
+      "active": false
     },
     {
       "id": "03",
@@ -537,7 +539,8 @@
         "3-5 years of experience in construction safety"
       ],
       "experience": "3-5 years",
-      "salary": "Negotiable"
+      "salary": "Negotiable",
+      "active": false
     },
     {
       "id": "04",
@@ -560,7 +563,8 @@
         "Knowledge of vehicle telematics platforms"
       ],
       "experience": "3-5 years",
-      "salary": "Negotiable"
+      "salary": "Negotiable",
+      "active": true
     },
     {
       "id": "05",
