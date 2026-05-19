@@ -266,6 +266,11 @@
       "shortName": "Centro",
       "sector": "Garments"
     },
+    {
+      "name": "Syngenta Bangladesh",
+      "shortName": "Syngenta",
+      "sector": "Agriculture"
+    },
     { "name": "Mutual Trust Bank", "shortName": "MTB", "sector": "Banking" },
     { "name": "DBL Group", "shortName": "DBL", "sector": "Garments" },
     { "name": "Apex", "shortName": "Apex", "sector": "Footwear" },
