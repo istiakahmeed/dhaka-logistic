@@ -7,7 +7,10 @@
     "established": 2010,
     "website": "www.dhakalogistic.com",
     "phone": "+88 02 9833589",
-    "emails": ["dhakalogistics@outlook.com", "mizanur.rahman@dhakalogistic.com"],
+    "emails": [
+      "dhakalogistics@outlook.com",
+      "mizanur.rahman@dhakalogistic.com"
+    ],
     "offices": {
       "corporate": {
         "label": "Corporate Office",
@@ -26,7 +29,7 @@
     "team": "15 Years avg. management experience",
     "teamDescription": "Our management team is drawn from leading multinational organizations, trained both domestically and internationally in modern management systems. A deliberate combination of practiced skills and contemporary outlook — built to serve enterprise-grade mandates.",
     "managementExperience": "15",
-    "maxExperience": "35"
+    "maxExperience": "100+"
   },
 
   "about": {
@@ -35,7 +38,11 @@
   },
 
   "stats": [
-    { "value": "2234", "label": "Resources Deployed", "sublabel": "Nationwide" },
+    {
+      "value": "2234",
+      "label": "Resources Deployed",
+      "sublabel": "Nationwide"
+    },
     { "value": "15+", "label": "Years of Operation", "sublabel": "Since 2010" },
     { "value": "22+", "label": "Active Clients", "sublabel": "Nationwide" },
     { "value": "5", "label": "Regional Offices", "sublabel": "Across BD" }
@@ -211,59 +218,140 @@
   ],
 
   "clients": [
-    { "name": "British American Tobacco Bangladesh", "shortName": "BATB", "sector": "FMCG" },
-    { "name": "BERGER Paints Bangladesh Limited", "shortName": "Berger", "sector": "Manufacturing" },
-    { "name": "Grameenphone Limited", "shortName": "Grameenphone", "sector": "Telecom" },
-    { "name": "Standard Chartered Bank Bangladesh", "shortName": "Standard Chartered", "sector": "Banking" },
+    {
+      "name": "British American Tobacco Bangladesh",
+      "shortName": "BATB",
+      "sector": "FMCG"
+    },
+    {
+      "name": "BERGER Paints Bangladesh Limited",
+      "shortName": "Berger",
+      "sector": "Manufacturing"
+    },
+    {
+      "name": "Grameenphone Limited",
+      "shortName": "Grameenphone",
+      "sector": "Telecom"
+    },
+    {
+      "name": "Standard Chartered Bank Bangladesh",
+      "shortName": "Standard Chartered",
+      "sector": "Banking"
+    },
     { "name": "Novo Nordisk", "shortName": "Novo Nordisk", "sector": "Pharma" },
-    { "name": "Evercare (Apollo) Hospitals Dhaka", "shortName": "Evercare", "sector": "Healthcare" },
-    { "name": "COATS Bangladesh Limited", "shortName": "Coats", "sector": "Manufacturing" },
-    { "name": "Daraz Bangladesh", "shortName": "Daraz", "sector": "E-commerce" },
+    {
+      "name": "Evercare (Apollo) Hospitals Dhaka",
+      "shortName": "Evercare",
+      "sector": "Healthcare"
+    },
+    {
+      "name": "COATS Bangladesh Limited",
+      "shortName": "Coats",
+      "sector": "Manufacturing"
+    },
+    {
+      "name": "Daraz Bangladesh",
+      "shortName": "Daraz",
+      "sector": "E-commerce"
+    },
     { "name": "Marico Bangladesh", "shortName": "Marico", "sector": "FMCG" },
-    { "name": "Elanco Animal Health Bangladesh", "shortName": "Elanco", "sector": "Animal Health" },
+    {
+      "name": "Elanco Animal Health Bangladesh",
+      "shortName": "Elanco",
+      "sector": "Animal Health"
+    },
     { "name": "Roche Bangladesh", "shortName": "Roche", "sector": "Pharma" },
-    { "name": "Centro Tex Bangladesh Limited", "shortName": "Centro", "sector": "Garments" },
+    {
+      "name": "Centro Tex Bangladesh Limited",
+      "shortName": "Centro",
+      "sector": "Garments"
+    },
     { "name": "Mutual Trust Bank", "shortName": "MTB", "sector": "Banking" },
     { "name": "DBL Group", "shortName": "DBL", "sector": "Garments" },
     { "name": "Apex", "shortName": "Apex", "sector": "Footwear" },
-    { "name": "Rupantorito Prakritik Gas Company Ltd", "shortName": "RPGCL", "sector": "Energy" },
-    { "name": "United Dhaka Tobacco Company Limited", "shortName": "JTI", "sector": "FMCG" },
+    {
+      "name": "Rupantorito Prakritik Gas Company Ltd",
+      "shortName": "RPGCL",
+      "sector": "Energy"
+    },
+    {
+      "name": "United Dhaka Tobacco Company Limited",
+      "shortName": "JTI",
+      "sector": "FMCG"
+    },
     { "name": "PetroMax LPG Ltd", "shortName": "PetroMax", "sector": "Energy" },
     { "name": "Target Sourcing", "shortName": "Target", "sector": "Sourcing" },
-    { "name": "DIFE (ILO Project)", "shortName": "DIFE", "sector": "Government/NGO" },
-    { "name": "Samobai (Govt), Khulna", "shortName": "Samobai", "sector": "Government" },
-    { "name": "Government of the People's Republic of Bangladesh", "shortName": "GoB", "sector": "Government" },
+    {
+      "name": "DIFE (ILO Project)",
+      "shortName": "DIFE",
+      "sector": "Government/NGO"
+    },
+    {
+      "name": "Samobai (Govt), Khulna",
+      "shortName": "Samobai",
+      "sector": "Government"
+    },
+    {
+      "name": "Government of the People's Republic of Bangladesh",
+      "shortName": "GoB",
+      "sector": "Government"
+    },
     { "name": "MWUK", "shortName": "MWUK", "sector": "International" }
   ],
 
   "trustedClients": [
-    "BATB", "Berger", "Grameenphone", "Standard Chartered",
-    "Novo Nordisk", "Daraz", "Roche"
+    "BATB",
+    "Berger",
+    "Grameenphone",
+    "Standard Chartered",
+    "Novo Nordisk",
+    "Daraz",
+    "Roche"
   ],
 
   "resources": {
     "total": 2234,
     "breakdown": [
-      { "role": "Think Tanks (Sr. Executives)", "count": 3, "outsourced": false },
+      {
+        "role": "Think Tanks (Sr. Executives)",
+        "count": 3,
+        "outsourced": false
+      },
       { "role": "Mid Level Management", "count": 15, "outsourced": false },
       { "role": "Manager / Supervisor", "count": 25, "outsourced": true },
-      { "role": "Consultant / Sub Asst. Engineer", "count": 2, "outsourced": false },
+      {
+        "role": "Consultant / Sub Asst. Engineer",
+        "count": 2,
+        "outsourced": false
+      },
       { "role": "Chemist / Lab Assistant", "count": 6, "outsourced": true },
       { "role": "Sales Officers", "count": 532, "outsourced": true },
       { "role": "Regional Field Coordinator", "count": 6, "outsourced": true },
       { "role": "Clerical Workers", "count": 128, "outsourced": true },
-      { "role": "Factory Workers (Non-core)", "count": 1133, "outsourced": true },
+      {
+        "role": "Factory Workers (Non-core)",
+        "count": 1133,
+        "outsourced": true
+      },
       { "role": "Call Centre Executives", "count": 131, "outsourced": true },
       { "role": "Office Peons / Messenger", "count": 33, "outsourced": true },
       { "role": "Drivers", "count": 91, "outsourced": true },
       { "role": "Lift Operators", "count": 4, "outsourced": true },
       { "role": "Hospitality Management", "count": 22, "outsourced": true },
-      { "role": "Electrician / Plumber / Technician", "count": 11, "outsourced": true },
+      {
+        "role": "Electrician / Plumber / Technician",
+        "count": 11,
+        "outsourced": true
+      },
       { "role": "Depot / Factory Tinter", "count": 16, "outsourced": true },
       { "role": "Cooks", "count": 4, "outsourced": true },
       { "role": "Gardeners", "count": 18, "outsourced": true },
       { "role": "Patient Care Attendants", "count": 6, "outsourced": true },
-      { "role": "Telephone / Info Centre Operator", "count": 3, "outsourced": true },
+      {
+        "role": "Telephone / Info Centre Operator",
+        "count": 3,
+        "outsourced": true
+      },
       { "role": "Hospitality", "count": 25, "outsourced": true },
       { "role": "F&B Services", "count": 15, "outsourced": true }
     ],
@@ -379,6 +467,192 @@
           ]
         }
       ]
+    }
+  ],
+
+  "jobPosts": [
+    {
+      "id": "01",
+      "title": "Senior HR Manager",
+      "department": "Human Resources",
+      "location": "Dhaka",
+      "type": "Full-Time",
+      "description": "We are seeking an experienced Senior HR Manager to lead our Human Resources division. You will oversee recruitment, employee relations, training & development, and compliance across all DLSS operations. This role requires deep expertise in Labour Law, Code of Conduct, and Industrial Relations within the Bangladesh context.",
+      "requirements": [
+        "10+ years of HR experience in multinational or enterprise environments",
+        "Expert knowledge of Bangladesh Labour Law and Code of Conduct",
+        "Proven track record in Industrial Relations and CBA negotiations",
+        "Strong leadership and team building capabilities",
+        "Proficiency in HRIS systems and payroll platforms",
+        "Excellent written and verbal communication skills"
+      ],
+      "qualifications": [
+        "Bachelor's degree in HR, Business Administration, or related field",
+        "CIPD or equivalent HR certification",
+        "Experience in outsourcing and payroll management"
+      ],
+      "experience": "10+ years",
+      "salary": "Competitive, negotiable based on experience"
+    },
+    {
+      "id": "02",
+      "title": "Operations Coordinator",
+      "department": "Operations",
+      "location": "Dhaka",
+      "type": "Full-Time",
+      "description": "Join our growing Operations team as an Operations Coordinator. You'll support the daily logistics operations, resource deployment tracking, and client coordination. Working closely with our regional field teams, you'll ensure seamless execution of all support services across nationwide locations.",
+      "requirements": [
+        "Strong organizational and time management skills",
+        "Experience in logistics or operations coordination",
+        "Proficiency in MS Office and data management",
+        "Excellent communication and interpersonal skills",
+        "Ability to work under pressure and meet tight deadlines",
+        "Problem-solving mindset"
+      ],
+      "qualifications": [
+        "Bachelors degree in Business, Supply Chain, or related field",
+        "2-3 years of experience in operations or logistics"
+      ],
+      "experience": "2-3 years",
+      "salary": "Negotiable"
+    },
+    {
+      "id": "03",
+      "title": "Safety Officer (Engineering & Construction)",
+      "department": "Engineering & Construction",
+      "location": "Dhaka",
+      "type": "Full-Time",
+      "description": "We seek a certified Safety Officer for our Engineering & Construction projects. You will establish and enforce safety protocols, conduct training, perform site inspections, and maintain compliance with Bangladesh building and safety regulations. This role is crucial in ensuring zero-incident project execution.",
+      "requirements": [
+        "Certification in Occupational Health & Safety (OHSAS/ISO 45001)",
+        "Knowledge of Bangladesh building codes and regulations",
+        "Site inspection and hazard assessment expertise",
+        "Strong documentation and reporting skills",
+        "Leadership and training capabilities",
+        "Physical ability to conduct site visits"
+      ],
+      "qualifications": [
+        "Diploma or Bachelor's degree in Civil Engineering or Safety Management",
+        "Valid safety certification from recognized body",
+        "3-5 years of experience in construction safety"
+      ],
+      "experience": "3-5 years",
+      "salary": "Negotiable"
+    },
+    {
+      "id": "04",
+      "title": "Fleet Manager",
+      "department": "Logistics",
+      "location": "Dhaka",
+      "type": "Full-Time",
+      "description": "Manage our growing vehicle fleet and driver coordination network. You'll oversee fleet maintenance, driver management, telematics data analysis, and route optimization. Coordinate with our 3D Tracking and GreenRoad partners for real-time monitoring and safety coaching.",
+      "requirements": [
+        "Experience in fleet or vehicle management",
+        "Knowledge of vehicle maintenance and logistics",
+        "Proficiency with telematics systems and fleet software",
+        "Strong analytical and problem-solving skills",
+        "Leadership experience with driver teams",
+        "Attention to safety and compliance"
+      ],
+      "qualifications": [
+        "Bachelor's degree in Logistics, Supply Chain, or related field",
+        "Valid driving license and 3-5 years fleet management experience",
+        "Knowledge of vehicle telematics platforms"
+      ],
+      "experience": "3-5 years",
+      "salary": "Negotiable"
+    },
+    {
+      "id": "05",
+      "title": "Payroll Specialist",
+      "department": "Finance",
+      "location": "Dhaka",
+      "type": "Full-Time",
+      "description": "Execute accurate and timely payroll processing for 2,000+ deployed resources. You'll manage Provident Fund and Gratuity calculations, coordinate with banking partners, and maintain compliance with DNCC and government payroll regulations. Meticulous attention to detail is critical.",
+      "requirements": [
+        "4+ years of payroll processing experience",
+        "Expert knowledge of Bangladesh employment regulations",
+        "Proficiency in payroll software and banking systems",
+        "Accuracy and attention to detail",
+        "Understanding of PF, Gratuity, and wage regulations",
+        "Strong numerical aptitude"
+      ],
+      "qualifications": [
+        "Bachelor's degree in Accounting, Finance, or related field",
+        "Payroll certification or equivalent training",
+        "Experience with large-scale payroll operations"
+      ],
+      "experience": "4+ years",
+      "salary": "Competitive"
+    },
+    {
+      "id": "06",
+      "title": "Field Coordinator (Chittagong)",
+      "department": "Regional Operations",
+      "location": "Chittagong",
+      "type": "Full-Time",
+      "description": "Be our eyes and ears in Chittagong region. As Field Coordinator, you'll manage on-ground operations, client liaison, resource deployment monitoring, and service quality audits. Regular site visits and communication with regional clients are core responsibilities.",
+      "requirements": [
+        "Strong organizational and communication skills",
+        "Experience in regional operations or field management",
+        "Ability to build client relationships",
+        "Proficiency in data collection and reporting",
+        "Own vehicle or reliable transportation",
+        "Flexibility for frequent field visits"
+      ],
+      "qualifications": [
+        "Bachelor's degree in Business or related field",
+        "2-3 years of field operations or logistics experience",
+        "Valid driving license"
+      ],
+      "experience": "2-3 years",
+      "salary": "Negotiable"
+    },
+    {
+      "id": "07",
+      "title": "Sales Representative (B2B Services)",
+      "department": "Sales & Marketing",
+      "location": "Dhaka",
+      "type": "Full-Time",
+      "description": "Drive business growth by promoting DLSS services to corporate clients. You'll identify prospects, conduct presentations, close deals, and maintain client relationships. Target organizations seeking integrated support services across HR, logistics, and facility management.",
+      "requirements": [
+        "3+ years of B2B sales experience",
+        "Track record of closing enterprise-level deals",
+        "Strong presentation and negotiation skills",
+        "CRM software proficiency",
+        "Good understanding of HR, Logistics, and FM services",
+        "Excellent communication skills"
+      ],
+      "qualifications": [
+        "Bachelor's degree in Business, Sales, or related field",
+        "Proven sales achievement with 3+ years experience",
+        "Understanding of Bangladesh business landscape"
+      ],
+      "experience": "3+ years",
+      "salary": "Competitive + Performance Incentives"
+    },
+    {
+      "id": "08",
+      "title": "Junior Engineer",
+      "department": "Engineering & Construction",
+      "location": "Dhaka",
+      "type": "Full-Time",
+      "description": "Support our engineering team in design, planning, and execution of construction projects. You'll work alongside BUET-qualified engineers on civil works, design documentation, site surveys, and government liaison. Ideal for recent graduates seeking hands-on experience.",
+      "requirements": [
+        "Strong understanding of civil engineering principles",
+        "AutoCAD or similar design software proficiency",
+        "Site surveying and measurement knowledge",
+        "Attention to detail and technical accuracy",
+        "Willingness to learn and grow",
+        "Physical ability for site work"
+      ],
+      "qualifications": [
+        "Bachelor's degree in Civil Engineering from recognized university",
+        "Recent graduate (0-2 years experience) or fresher welcome",
+        "Basic CAD knowledge preferable"
+      ],
+      "experience": "0-2 years",
+      "salary": "Negotiable"
     }
   ]
 }
