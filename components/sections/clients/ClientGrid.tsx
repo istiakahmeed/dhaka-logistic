@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
-import Image from "next/image";
-import { motion, useInView } from "framer-motion";
 import { data } from "@/lib/data";
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { useRef, useState } from "react";
 
 const clientLogos: Record<string, string> = {
   BATB: "/client-logo/BATB.png",
@@ -27,6 +27,7 @@ const clientLogos: Record<string, string> = {
   Target: "/client-logo/Target_logo.svg.png",
   DIFE: "/client-logo/dife_logo.png",
   GoB: "/client-logo/Government_Seal_of_Bangladesh.svg",
+  Syngenta: "/client-logo/syngenta.svg",
 };
 
 export function ClientGrid() {
@@ -36,17 +37,16 @@ export function ClientGrid() {
   const allClients = data.clients;
 
   return (
-    <section ref={ref} className='bg-white py-[96px] md:py-[120px]'>
-      <div className='max-w-7xl mx-auto px-6 md:px-12'>
+    <section ref={ref} className="bg-white py-[96px] md:py-[120px]">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
-          initial='hidden'
+          initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={{
             hidden: {},
             visible: { transition: { staggerChildren: 0.02 } },
           }}
-          className='grid grid-cols-2 md:grid-cols-4 border-t border-l border-divider'
-        >
+          className="grid grid-cols-2 md:grid-cols-4 border-t border-l border-divider">
           {allClients.map((client, i) => {
             const logo = clientLogos[client.shortName];
             return (
@@ -58,32 +58,29 @@ export function ClientGrid() {
                 }}
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
-                className='relative flex items-center justify-center h-24 md:h-28 border-r border-b border-divider cursor-default'
-              >
+                className="relative flex items-center justify-center h-24 md:h-28 border-r border-b border-divider cursor-default">
                 {logo ? (
                   <div
-                    className='relative w-3/4 h-3/4 transition-all duration-200'
+                    className="relative w-3/4 h-3/4 transition-all duration-200"
                     style={{
                       opacity: hovered === i ? 1 : 0.55,
                       transform: hovered === i ? "scale(1.05)" : "scale(1)",
-                    }}
-                  >
+                    }}>
                     <Image
                       src={logo}
                       alt={client.name}
                       fill
-                      className='object-contain'
-                      sizes='20vw'
+                      className="object-contain"
+                      sizes="20vw"
                     />
                   </div>
                 ) : (
                   <span
-                    className='text-sm font-body font-semibold transition-all duration-200'
+                    className="text-sm font-body font-semibold transition-all duration-200"
                     style={{
                       color: hovered === i ? "#1a4d2e" : "#888888",
                       opacity: hovered === i ? 1 : 0.6,
-                    }}
-                  >
+                    }}>
                     {client.shortName}
                   </span>
                 )}
@@ -92,7 +89,7 @@ export function ClientGrid() {
           })}
         </motion.div>
 
-        <p className='text-xs font-body italic text-gray-500 mt-6'>
+        <p className="text-xs font-body italic text-gray-500 mt-6">
           + Several additional government and private engagements not listed
           publicly.
         </p>
