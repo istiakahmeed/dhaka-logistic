@@ -1,32 +1,27 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
+import dlssData from "@/data/dlss-data.json";
+import { motion, useInView } from "framer-motion";
+import Link from "next/link";
+import { useRef } from "react";
 
 export default function CareerPage() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", cv: null as File | null });
-  const [submitted, setSubmitted] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const jobPosts = dlssData.jobPosts;
 
   return (
     <main className="overflow-x-hidden">
       <Navbar />
-      <section ref={ref} className="bg-surface-light pt-[140px] pb-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <section ref={ref} className="bg-green-primary pt-[140px] pb-14">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 ">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="font-display font-extrabold text-neutral-dark leading-[1.05] text-[40px] md:text-[56px] lg:text-[64px] max-w-3xl"
-          >
+            className="font-display font-extrabold text-gray-100 leading-[1.05] text-[40px] md:text-[56px] lg:text-[64px] max-w-3xl ">
             Join Our
             <br />
             Team.
@@ -35,90 +30,60 @@ export default function CareerPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-            className="text-[17px] font-body text-neutral-mid leading-relaxed max-w-[540px] mt-6"
-          >
-            Send us your CV and we&apos;ll reach out when a role matches your profile.
+            className="text-[17px] font-body text-green-accent leading-relaxed max-w-[540px] mt-6">
+            Explore current openings. Apply for a role that matches your skills
+            and aspirations.
           </motion.p>
         </div>
       </section>
 
       <section className="bg-white py-[96px] md:py-[120px]">
-        <div className="max-w-2xl mx-auto px-6 md:px-12">
-          {submitted ? (
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="border border-green-accent bg-green-accent/5 p-8 text-center"
-            >
-              <p className="font-display font-bold text-xl text-green-primary mb-2">
-                Application Received
-              </p>
-              <p className="text-sm font-body text-neutral-mid">
-                Thank you, {form.name}. We&apos;ll review your CV and contact you at {form.email} if your profile matches an opening.
-              </p>
-            </motion.div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div>
-                <label className="block text-xs font-body font-semibold text-neutral-dark mb-2">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full pb-2 text-sm font-body text-neutral-dark border-b border-neutral-mid outline-none focus:border-green-accent transition-colors bg-transparent"
-                  required
-                />
-              </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {jobPosts.map((job, index) => (
+              <Link key={job.id} href={`/career/${job.id}`}>
+                <motion.div
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "easeOut",
+                    delay: index * 0.1,
+                  }}
+                  className="border border-divider p-8 hover:bg-green-primary hover:text-white hover:border-green-primary transition-all duration-200 cursor-pointer group">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <p className="text-xs font-body font-semibold text-green-accent mb-2">
+                        {job.department}
+                      </p>
+                      <h3 className="font-display font-bold text-lg md:text-xl text-neutral-dark group-hover:text-white transition-colors">
+                        {job.title}
+                      </h3>
+                    </div>
+                    <span className="font-display font-bold text-sm md:text-base text-green-accent group-hover:text-green-accent">
+                      {job.id}
+                    </span>
+                  </div>
 
-              <div>
-                <label className="block text-xs font-body font-semibold text-neutral-dark mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full pb-2 text-sm font-body text-neutral-dark border-b border-neutral-mid outline-none focus:border-green-accent transition-colors bg-transparent"
-                  required
-                />
-              </div>
+                  <div className="space-y-3 mb-6">
+                    <p className="text-xs font-body text-neutral-mid group-hover:text-gray-300 uppercase tracking-wide">
+                      {job.location} • {job.type}
+                    </p>
+                    <p className="text-sm font-body text-neutral-mid group-hover:text-gray-300 line-clamp-2">
+                      {job.description}
+                    </p>
+                  </div>
 
-              <div>
-                <label className="block text-xs font-body font-semibold text-neutral-dark mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full pb-2 text-sm font-body text-neutral-dark border-b border-neutral-mid outline-none focus:border-green-accent transition-colors bg-transparent"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-body font-semibold text-neutral-dark mb-2">
-                  Upload CV
-                </label>
-                <input
-                  type="file"
-                  accept=".pdf,.doc,.docx"
-                  onChange={(e) => setForm({ ...form, cv: e.target.files?.[0] || null })}
-                  className="w-full text-sm font-body text-neutral-mid file:mr-4 file:py-2 file:px-4 file:border file:border-divider file:text-sm file:font-body file:bg-surface-light file:text-neutral-mid hover:file:bg-gray-200 transition-colors cursor-pointer"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-green-primary text-white text-sm font-body font-medium py-3.5 transition-colors duration-150 hover:bg-green-primary-hover"
-              >
-                Submit Application
-              </button>
-            </form>
-          )}
+                  <div className="flex items-center text-xs font-body font-semibold text-green-accent group-hover:text-green-accent">
+                    View Details
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                      →
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

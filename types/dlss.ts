@@ -101,6 +101,19 @@ export interface OrgNode {
   children?: OrgNode[];
 }
 
+export interface JobPost {
+  id: string;
+  title: string;
+  department: string;
+  location: string;
+  type: "Full-Time" | "Part-Time" | "Contract";
+  description: string;
+  requirements: string[];
+  qualifications: string[];
+  experience: string;
+  salary?: string;
+}
+
 export interface AboutData {
   heroSubtitle: string;
   whoWeAre: string;
@@ -130,4 +143,5 @@ export interface DLSSData {
   future: FuturePlan;
   businessData2025: BusinessData;
   orgChart: OrgNode[];
+  jobPosts: JobPost[];
 }
