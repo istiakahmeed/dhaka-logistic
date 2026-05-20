@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     "DLSS",
     "payroll management Bangladesh",
   ],
+  icons: [{ rel: "icon", url: "/dlsLogo.png" }],
   openGraph: {
     title: "DLSS — Dhaka Logistics Services & Solution",
     description:
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
     siteName: "Dhaka Logistics Services & Solution",
     locale: "en_BD",
     type: "website",
+    images: [{ url: "/dlsLogo.png", width: 200, height: 50 }],
   },
 };
 
