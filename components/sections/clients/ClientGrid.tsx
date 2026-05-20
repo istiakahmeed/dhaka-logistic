@@ -28,6 +28,8 @@ const clientLogos: Record<string, string> = {
   DIFE: "/client-logo/dife_logo.png",
   GoB: "/client-logo/Government_Seal_of_Bangladesh.svg",
   Syngenta: "/client-logo/syngenta.svg",
+  Samobai: "/client-logo/samobai.png",
+  MWUK: "/client-logo/miHub.svg",
 };
 
 export function ClientGrid() {

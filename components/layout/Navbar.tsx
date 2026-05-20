@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -43,22 +44,17 @@ export function Navbar() {
         backdropFilter: showDark ? "blur(12px)" : "none",
       }}>
       <div className="max-w-7xl mx-auto h-full px-6 md:px-12 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-display font-bold text-lg tracking-tight">
-          <span
-            className="transition-colors duration-300"
-            style={{ color: showDark ? "#ffffff" : "#1a4d2e" }}>
-            DHAKA
-          </span>
-          <span
-            className="transition-colors duration-300 ml-1"
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/dlsLogo.png"
+            alt="Dhaka Logistics Services & Solution"
+            width={140}
+            height={35}
+            className="h-8 w-auto"
             style={{
-              color: showDark ? "#7dc142" : "#1a4d2e",
-              fontWeight: 700,
-            }}>
-            LOGISTICS
-          </span>
+              filter: showDark ? "brightness(0) invert(1)" : "none",
+            }}
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

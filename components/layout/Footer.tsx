@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { data } from "@/lib/data";
+import Image from "next/image";
+import Link from "next/link";
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -29,9 +30,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="font-display font-bold text-lg tracking-tight text-white mb-4">
-              DHAKA<span className="text-green-accent ml-1 font-bold">LOGISTICS</span>
-            </div>
+            <Image
+              src="/dlsLogo.png"
+              alt="Dhaka Logistics Services & Solution"
+              width={160}
+              height={40}
+              className="mb-4 h-9 w-auto brightness-0 invert"
+            />
             <p className="text-sm font-body text-gray-400 leading-relaxed mb-6">
               Your single point of contact for every operational need.
             </p>
@@ -39,15 +44,13 @@ export function Footer() {
               <a
                 href={company.social[0]?.url || "#"}
                 className="w-8 h-8 flex items-center justify-center border border-gray-600 text-gray-400 hover:border-green-accent hover:text-green-accent transition-colors text-xs"
-                aria-label="LinkedIn"
-              >
+                aria-label="LinkedIn">
                 in
               </a>
               <a
                 href={company.social[1]?.url || "#"}
                 className="w-8 h-8 flex items-center justify-center border border-gray-600 text-gray-400 hover:border-green-accent hover:text-green-accent transition-colors text-xs"
-                aria-label="Facebook"
-              >
+                aria-label="Facebook">
                 f
               </a>
             </div>
@@ -62,8 +65,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-body text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="text-sm font-body text-gray-400 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -80,8 +82,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm font-body text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="text-sm font-body text-gray-400 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -114,7 +115,19 @@ export function Footer() {
       <div className="border-t border-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-xs font-body text-gray-500">
-            &copy; 2025 Dhaka Logistics Services & Solution. All rights reserved.
+            All rights reserved By &copy; {new Date().getFullYear()}{" "}
+            <span className="text-green-accent">
+              Dhaka Logistics Services & Solution.
+            </span>
+          </p>
+          <p className="text-xs font-body text-gray-500">
+            Developed By{" "}
+            <a
+              href="https://www.stellarworm.com/"
+              target="_blank"
+              className="text-green-accent hover:underline">
+              Stellar Worm
+            </a>
           </p>
         </div>
       </div>
