@@ -32,7 +32,7 @@ export function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 h-[68px]"
+      className='fixed top-0 left-0 right-0 z-50 h-[68px]'
       initial={false}
       animate={{
         // backgroundColor: showDark ? "#1a4d2e" : "#ffffff",
@@ -44,42 +44,46 @@ export function Navbar() {
       style={{
         borderBottomWidth: 1,
         backdropFilter: showDark ? "blur(12px)" : "none",
-      }}>
-      <div className="max-w-7xl mx-auto h-full px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="shrink-0">
+      }}
+    >
+      <div className='max-w-7xl mx-auto h-full px-6 md:px-12 flex items-center justify-between'>
+        <Link href='/' className='shrink-0'>
           <Image
-            src="/dlsLogo.png"
-            alt="Dhaka Logistics Services & Solution"
+            src='/dlsLogo.png'
+            alt='Dhaka Logistics Services & Solution'
             width={140}
             height={35}
-            className="h-full w-full"
+            className='h-14 w-full'
           />
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className='hidden md:flex items-center gap-8'>
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-body font-medium transition-colors duration-100 hover:text-green-accent"
+              className='text-sm font-body font-medium transition-colors duration-100 hover:text-green-accent'
               style={{
                 //  color: showDark ? "#ffffff" : "#4a4a4a"
                 color: showDark ? "#4a4a4a" : "#4a4a4a",
-              }}>
+              }}
+            >
               {link.label}
             </Link>
           ))}
           <Link
-            href="/contact"
-            className="bg-green-primary text-white text-sm font-body font-medium px-5 py-2.5 no-underline transition-colors duration-150 hover:bg-green-primary-hover">
+            href='/contact'
+            className='bg-green-primary text-white text-sm font-body font-medium px-5 py-2.5 no-underline transition-colors duration-150 hover:bg-green-primary-hover'
+          >
             Get In Touch
           </Link>
         </div>
 
         <button
-          className="md:hidden"
+          className='md:hidden'
           onClick={() => setIsMobileOpen(!isMobileOpen)}
-          aria-label="Toggle menu">
+          aria-label='Toggle menu'
+        >
           {isMobileOpen ? (
             <X size={20} color={showDark ? "#ffffff" : "#1a4d2e"} />
           ) : (
@@ -95,21 +99,24 @@ export function Navbar() {
           opacity: isMobileOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden bg-white border-b border-divider">
-        <div className="flex flex-col gap-4 px-6 py-4">
+        className='md:hidden overflow-hidden bg-white border-b border-divider'
+      >
+        <div className='flex flex-col gap-4 px-6 py-4'>
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-neutral-mid text-sm font-body font-medium"
-              onClick={() => setIsMobileOpen(false)}>
+              className='text-neutral-mid text-sm font-body font-medium'
+              onClick={() => setIsMobileOpen(false)}
+            >
               {link.label}
             </Link>
           ))}
           <Link
-            href="/contact"
-            className="bg-green-primary text-white text-sm font-body font-medium px-5 py-2.5 text-center"
-            onClick={() => setIsMobileOpen(false)}>
+            href='/contact'
+            className='bg-green-primary text-white text-sm font-body font-medium px-5 py-2.5 text-center'
+            onClick={() => setIsMobileOpen(false)}
+          >
             Get In Touch
           </Link>
         </div>
