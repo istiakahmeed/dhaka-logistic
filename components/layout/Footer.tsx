@@ -1,5 +1,4 @@
 import { data } from "@/lib/data";
-import Image from "next/image";
 import Link from "next/link";
 
 const quickLinks = [
@@ -30,14 +29,17 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <Image
+            {/* <Image
               src="/dlsLogo.png"
               alt="Dhaka Logistics Services & Solution"
-              width={160}
-              height={40}
-              className="mb-4 h-9 w-auto brightness-0 invert"
-            />
-            <p className="text-sm font-body text-gray-400 leading-relaxed mb-6">
+              width={140}
+              height={35}
+              className="h-auto w-full"
+            /> */}
+            <p className="text-3xl font-bold">
+              Dhaka <span className="text-green-accent">Logistics</span>
+            </p>
+            <p className="text-sm mt-3 font-body text-gray-400 leading-relaxed mb-6">
               Your single point of contact for every operational need.
             </p>
             <div className="flex gap-3">

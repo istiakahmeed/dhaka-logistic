@@ -35,8 +35,10 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 h-[68px]"
       initial={false}
       animate={{
-        backgroundColor: showDark ? "#1a4d2e" : "#ffffff",
-        borderBottomColor: showDark ? "rgba(255,255,255,0.08)" : "#e2e2de",
+        // backgroundColor: showDark ? "#1a4d2e" : "#ffffff",
+        // borderBottomColor: showDark ? "rgba(255,255,255,0.08)" : "#e2e2de",
+        backgroundColor: showDark ? "#ffffff" : "#ffffff",
+        borderBottomColor: showDark ? "#e2e2de" : "#e2e2de",
       }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       style={{
@@ -50,10 +52,7 @@ export function Navbar() {
             alt="Dhaka Logistics Services & Solution"
             width={140}
             height={35}
-            className="h-8 w-auto"
-            style={{
-              filter: showDark ? "brightness(0) invert(1)" : "none",
-            }}
+            className="h-full w-full"
           />
         </Link>
 
@@ -63,7 +62,10 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className="text-sm font-body font-medium transition-colors duration-100 hover:text-green-accent"
-              style={{ color: showDark ? "#ffffff" : "#4a4a4a" }}>
+              style={{
+                //  color: showDark ? "#ffffff" : "#4a4a4a"
+                color: showDark ? "#4a4a4a" : "#4a4a4a",
+              }}>
               {link.label}
             </Link>
           ))}

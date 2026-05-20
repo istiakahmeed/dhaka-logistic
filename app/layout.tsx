@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Plus_Jakarta_Sans,
-  Inter,
-  JetBrains_Mono,
-} from "next/font/google";
+import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const display = Plus_Jakarta_Sans({
@@ -34,7 +30,7 @@ export const metadata: Metadata = {
     "DLSS",
     "payroll management Bangladesh",
   ],
-  icons: [{ rel: "icon", url: "/dlsLogo.png" }],
+  icons: [{ rel: "icon", url: "/dlsIco.png" }],
   openGraph: {
     title: "DLSS — Dhaka Logistics Services & Solution",
     description:
@@ -43,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Dhaka Logistics Services & Solution",
     locale: "en_BD",
     type: "website",
-    images: [{ url: "/dlsLogo.png", width: 200, height: 50 }],
+    images: [{ url: "/dlsIco.png", width: 200, height: 50 }],
   },
 };
 
@@ -55,9 +51,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased scroll-smooth`}
-    >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>{children}</body>
+      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased scroll-smooth`}>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
