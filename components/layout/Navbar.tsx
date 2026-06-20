@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/clients", label: "Clients" },
   { href: "/capability", label: "Capability" },
   { href: "/career", label: "Career" },
+  { href: "/gallery", label: "Gallery" },
 ];
 
 export function Navbar() {

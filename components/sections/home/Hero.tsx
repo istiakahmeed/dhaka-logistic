@@ -93,6 +93,50 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
+          className='grid grid-cols-2 gap-3 h-[300px] sm:h-[400px] lg:hidden'
+        >
+          <div className='relative overflow-hidden'>
+            <Image
+              src='/services/Human-Resource.jpg'
+              alt='DLSS Operations'
+              fill
+              className='object-cover'
+              sizes='50vw'
+            />
+          </div>
+          <div className='bg-green-primary relative overflow-hidden'>
+            <Image
+              src='/services/Logistics-Services&Solutions.jpg'
+              alt='DLSS Logistics'
+              fill
+              className='object-cover'
+              sizes='50vw'
+            />
+          </div>
+          <div className='bg-green-accent relative overflow-hidden'>
+            <Image
+              src='/services/Engineering&Construction.jpg'
+              alt='DLSS Engineering'
+              fill
+              className='object-cover'
+              sizes='50vw'
+            />
+          </div>
+          <div className='bg-green-primary/40 relative overflow-hidden'>
+            <Image
+              src='/services/Event-Management.jpg'
+              alt='DLSS Events'
+              fill
+              className='object-cover'
+              sizes='50vw'
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className='hidden lg:grid grid-cols-[1.2fr_0.8fr] grid-rows-[1fr_1fr] gap-3 h-[520px]'
         >
           <div className='relative row-span-2 overflow-hidden'>
