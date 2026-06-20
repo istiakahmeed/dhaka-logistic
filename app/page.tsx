@@ -7,6 +7,7 @@ import { VisionQuote } from "@/components/sections/home/VisionQuote";
 import { WhyDLSS } from "@/components/sections/home/WhyDLSS";
 import { PartnersGrid } from "@/components/sections/home/PartnersGrid";
 import { IFMTeaser } from "@/components/sections/home/IFMTeaser";
+import { HomeGallerySection } from "@/components/gallery/HomeGallerySection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyDLSS />
       <PartnersGrid />
       <IFMTeaser />
+      <HomeGallerySection />
       <Footer />
     </main>
   );
